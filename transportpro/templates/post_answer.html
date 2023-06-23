@@ -1,0 +1,7 @@
+<h2>Post an Answer</h2>
+<p>Question: {{ question.title }}</p>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>

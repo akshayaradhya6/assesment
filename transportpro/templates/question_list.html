@@ -1,0 +1,9 @@
+{% for question in questions %}
+  <h2>{{ question.title }}</h2>
+  <p>{{ question.content }}</p>
+  <p>Posted by: {{ question.user.username }}</p>
+  <a href="{% url 'question_detail' question_id=question.id %}">View details</a>
+  <hr>
+{% empty %}
+  <p>No questions found.</p>
+{% endfor %}
